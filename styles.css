@@ -1,0 +1,37 @@
+/* Style the navigation bar */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #02404E;
+    overflow: auto;
+    text-align: center;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    display: inline-block;
+    padding: 30px; /* Increase padding for a bit larger size */
+    margin-right: 0;
+    width: 20%; /* Slightly reduce width to accommodate larger padding */
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    font-size: 28px; /* Increase font size for a bit larger text */
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px; /* Increase margin for space between icons in vertical layout */
+    }
+  }
+  
