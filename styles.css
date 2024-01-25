@@ -2,37 +2,46 @@ body {
   background-color: #80BCBD;
   margin: 0;
 }
-.navbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #02404E;
-    overflow: auto;
-    text-align: center;
-  }
 
-  .navbar a {
-    display: inline-block;
-    padding: 30px;
-    margin-right: 0;
-    width: 20%; 
-    box-sizing: border-box;
-    color: white;
-    text-decoration: none;
-    font-size: 28px; 
-  }
-  
-  .navbar a:hover {
-    background-color: #000;
-  }
-  
-  
-  @media screen and (max-width: 500px) {
-    .navbar a {
-      display: block;
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px; 
-    }
-  }
-  
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #02404E;
+  overflow: auto;
+  text-align: center;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 30px;
+  margin-right: 0;
+  width: 20%;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+
+.contact-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.contact-icon a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.contact-icon a:hover {
+  background-color: #000;
+}
