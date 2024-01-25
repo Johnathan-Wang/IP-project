@@ -27,7 +27,6 @@ body {
   background-color: #000;
 }
 
-
 .contact-icon {
   position: fixed;
   top: 20px;
@@ -45,3 +44,23 @@ body {
 .contact-icon a:hover {
   background-color: #000;
 }
+
+.contact-box {
+  background-color: #D9D9D9;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  width: 500px;
+  text-align: center;
+}
+
+.contact-box h2 {
+  margin-top: 0;
+  font-size: 30px;
+  color: #02404E;
+}
+
+
