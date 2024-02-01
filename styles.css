@@ -5,7 +5,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 100px;
 }
 
 .navbar {
@@ -16,6 +17,7 @@ body {
   overflow: auto;
   text-align: center;
   display: flex;
+  z-index: 1;
 }
 
 .navbar a {
@@ -38,6 +40,7 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
+  z-index: 2;
 }
 
 .contact-icon a {
@@ -64,18 +67,33 @@ body {
   text-align: center;
 }
 
+.slider-container {
+  width: 100%;
+  text-align: center;
+}
+
+.slider-img {
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;
+  display: block;
+}
+
 .sketchfab-embed-wrapper {
-  width: 45%;
+  width: 48%;
   margin: 5px;
   text-align: center;
 }
 
 .sketchfab-embed-wrapper iframe {
-  width: 70%;
-  height: 250px; 
+  width: 50%;
+  height: 200px;
 }
 
-.sketchfab-embed-wrapper p {
-  display: none;
+.sketchfab-embed-wrapper .product-description,
+.sketchfab-embed-wrapper .product-price {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin: 5px;
 }
-
