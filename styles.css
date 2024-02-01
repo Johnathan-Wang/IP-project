@@ -1,6 +1,11 @@
 body {
   background-color: #80BCBD;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .navbar {
@@ -10,17 +15,19 @@ body {
   background-color: #02404E;
   overflow: auto;
   text-align: center;
+  display: flex;
 }
 
 .navbar a {
-  display: inline-block;
+  flex: 1;
   padding: 30px;
-  margin-right: 0;
-  width: 20%;
   box-sizing: border-box;
   color: white;
   text-decoration: none;
   font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar a:hover {
@@ -57,10 +64,18 @@ body {
   text-align: center;
 }
 
-.contact-box h2 {
-  margin-top: 0;
-  font-size: 30px;
-  color: #02404E;
+.sketchfab-embed-wrapper {
+  width: 45%;
+  margin: 5px;
+  text-align: center;
 }
 
+.sketchfab-embed-wrapper iframe {
+  width: 70%;
+  height: 250px; 
+}
+
+.sketchfab-embed-wrapper p {
+  display: none;
+}
 
