@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>Contact Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
-
-    <body>
+    <body class="contactbody">
+        <!-- navbar -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="navbar">
             <a href="index.html"><i class="fa fa-fw fa-home"></i></a>
             <a href="search.html"><i class="fa fa-fw fa-search"></i></a>
             <a href="profile.html"><i class="fa fa-fw fa-user"></i></a>
-            <a href="cart.html"><i class="fa fa-fw fa-shopping-cart"></i></a>
+            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i></a>
         </div>
 
+        <!-- contact-->
+        <form class="contact-form">
+            <header>
+                <h1>Contact Us</h1>
+            </header>
 
-    <div class="contact-box">
-        <h2>Contact/Visit Us</h2>
-        <p>Email: <a href="mailto:fafaef@gmail.com">fafaef@gmail.com</a></p>
-        <p>Phone: <a href="tel:913139101">913139101</a></p>
-        <p>Outlets: 
-            <a href="https://maps.google.com/?q=101+uppt+rd+Singapore+678213">101 Upper Road, Singapore 678213</a>
-            <p><a href="https://maps.google.com/?q=70+Jelloe+Road+Singapore+208749">70 Jelloe Road, Singapore 208749</a></p>
-        </p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-    
-</body>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <h1> Or Contact us at</h1>
+        <div style="padding: 50px; width: 700px; background-color: #02404E; margin: auto; border-radius: 12px; color: white;">
+            <p style="font-size: 50px; text-align: center;"> Email: Sportify@gmail.com </p>
+            <p style="font-size: 50px; text-align: center;"> Phone Number: 65+9******2 </p>
+        </div>
+
+    </body>
 </html>
