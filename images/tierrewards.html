@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tier Rewards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tier Rewards</h1>
+    </header>
+
+    <div class="rewards-container">
+        <div style="font-size: 50px;">
+            <strong>Current Points:</strong> <span id="current-points"></span>
+        </div>
+
+        <div style="font-size: 50px;">
+            <strong>Rewards:</strong>
+            <ul id="rewards-list">
+                <li><p style="font-size: 30px;">1. FREE SHIPPING ON NEXT PURCHASE: 3,000 points</p></li>
+                <li><p style="font-size: 30px;">2. 50% OFF NEXT PURCHASE: 7,000 points</p></li>
+                <li><p style="font-size: 30px;">3. BUY 1 GET 1 FREE: 10,000 points</p></li>
+            </ul>
+        </div>
+
+        <form id="redeem-form">
+            <label><input type="radio" name="reward" value="3000" class="radio"> Redeem 3000 Points</label><br>
+            <label><input type="radio" name="reward" value="7000" class="radio"> Redeem 7000 Points</label><br>
+            <label><input type="radio" name="reward" value="10000" class="radio"> Redeem 10000 Points</label><br>
+            <button type="button" id="redeem-button" style="font-size: 50px;">Redeem</button>
+        </form>
+        <br>
+        <button id="back-button" style="font-size: 50px;"><a href="profile.html" style="color: white;">Back to Profile</a></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to get URL parameters
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+
+            // Get points from URL parameters
+            const points = getParameterByName('points');
+            if (points) {
+                document.getElementById('current-points').textContent = points;
+            } else {
+                console.error('Points not found in URL parameters');
+            }
+
+            // Redeem button click event
+            document.getElementById('redeem-button').addEventListener('click', function () {
+                // Get current points
+                const currentPoints = parseInt(document.getElementById('current-points').textContent);
+                
+                // Determine which reward to redeem
+                const selectedReward = document.querySelector('input[name="reward"]:checked');
+                if (selectedReward) {
+                    const rewardPoints = parseInt(selectedReward.value);
+                    
+                    // Check if user has enough points
+                    if (currentPoints >= rewardPoints) {
+                        // Deduct points
+                        const updatedPoints = currentPoints - rewardPoints;
+                        document.getElementById('current-points').textContent = updatedPoints;
+                        alert(`Congratulations! Reward redeemed successfully.`);
+                    } else {
+                        alert('Insufficient points to redeem this reward.');
+                    }
+                } else {
+                    alert('Please select a reward to redeem.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
