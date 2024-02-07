@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rewards Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="rewardbody">
+    <header>
+        <h1>Reward</h1>
+    </header>
+    <h1>Thanks for ordering</h1>
+    <p class="rewardstext">Your order will arrive in 5 - 10 working days</p>
+
+    <h1 class="rewardstext">Congrats</h1>
+    <p class="rewardstext">You have earned a reward!</p>
+
+    <div style="padding: 50px; width: 700px; background-color: #02404E; margin: auto; border-radius: 12px; color: white;">
+        <p style="font-size: 100px; text-align: center;"> 
+            <!-- Display points here -->
+            <span id="pointsDisplay"></span> pts!
+        </p>
+    </div>
+
+    <p style="font-size: 70px; text-align: center;">
+         Leave us a review to earn more points 
+    </p>
+
+    <a href="index.html">
+        <div class="rewardcontainer">
+            <button class="reward-button" type="button" >Continue</button>
+        </div>
+    </a>
+    
+    <a href="reviews.html">
+        <div class="rewardcontainer">
+            <button class="reward-button" type="button" >Leave a Review</button>
+        </div>
+    </a>
+
+   <!-- Update the script to retrieve and display points -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const points = urlParams.get('points');
+        
+        // Display points
+        if (points !== null) {
+            document.getElementById('pointsDisplay').innerText = points;
+        } else {
+            console.error('Points not found in local storage');
+        }
+    });
+</script>
+
+</body>
+</html>
