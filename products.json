@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Tennis Racket",
+        "price": 45.00,
+        "model": "<iframe title='Tennis Racket' frameborder='0' allowfullscreen mozallowfullscreen='true' webkitallowfullscreen='true' allow='autoplay; fullscreen; xr-spatial-tracking' xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src='https://sketchfab.com/models/373e62eeab7445bda2de1b07ce919a0b/embed'></iframe>"
+    },
+    {
+        "id": 2,
+        "name": "Dumbbell",
+        "price": 46.00,
+        "model": "<iframe title='Dumbbell' frameborder='0' allowfullscreen mozallowfullscreen='true' webkitallowfullscreen='true' allow='autoplay; fullscreen; xr-spatial-tracking' xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src='https://sketchfab.com/models/09bb8452bd3b4660b8af289d8e5cdc2d/embed'></iframe>"
+    },
+    {
+        "id": 3,
+        "name": "Basketball Hoop",
+        "price": 200.00,
+        "model": "<iframe title='Basketball Hoop' frameborder='0' allowfullscreen mozallowfullscreen='true' webkitallowfullscreen='true' allow='autoplay; fullscreen; xr-spatial-tracking' xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src='https://sketchfab.com/models/1b44b2392d8c4433a9a913e500db3486/embed'></iframe>"
+    },
+    {
+        "id": 4,
+        "name": "Weightbench",
+        "price": 350.00,
+        "model": "<iframe title='Weightbench' frameborder='0' allowfullscreen mozallowfullscreen='true' webkitallowfullscreen='true' allow='autoplay; fullscreen; xr-spatial-tracking' xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src='https://sketchfab.com/models/6502a69880194858b4d6d09a4ff1df8e/embed'></iframe>"
+    }
+        
+]
