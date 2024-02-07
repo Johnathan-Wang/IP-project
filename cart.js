@@ -17,9 +17,15 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
-document.querySelector('.checkOut').addEventListener('click', function () {
-    const cartData = JSON.stringify(carts);
-    window.location.href = `checkout.html?cart=${encodeURIComponent(cartData)}`;
+document.querySelector('.checkOut').addEventListener('click', function (event) {
+    // Prevent default behavior if the cart is empty
+    if (carts.length === 0) {
+        event.preventDefault();
+        alert('Your cart is empty. Please add items to proceed to checkout.');
+    } else {
+        const cartData = JSON.stringify(carts);
+        window.location.href = `checkout.html?cart=${encodeURIComponent(cartData)}`;
+    }
 });
 
 const addDataToHTML = () => {
