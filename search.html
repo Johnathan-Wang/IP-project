@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="searchbody">
+        <!-- navbar -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="navbar">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i></a>
+            <a href="search.html"><i class="fa fa-fw fa-search"></i></a>
+            <a href="profile.html"><i class="fa fa-fw fa-user"></i></a>
+            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i></a>
+        </div>
+
+        <header>
+            <h1> Search </h1>
+        </header>
+        <!-- filter buttons -->
+        <div class="center">
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('balls')"> Balls</button>
+                <button class="btn" onclick="filterSelection('rackets')"> Rackets</button>
+                <button class="btn" onclick="filterSelection('others')"> Others</button>
+            </div>
+        </div>
+
+        <!-- filter/store items -->
+        <div class="container">
+            <div class="items">
+                <div class="shop-item filterDiv others">
+                    <img src="Images/Dumb_bell.png" alt="Dumb_bell">
+                    <div class="desc">Dumb bell - 10kg
+                        <p>Price: $44.99</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items">
+                <div class="shop-item filterDiv rackets">
+                    <img src="images/Batminton_racket.png" alt="Badminton_Racket">
+                    <div class="desc">Batminton recket
+                        <p>Price: $39.99</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items">
+                <div class="shop-item filterDiv others">
+                    <img src="images/Weight_bench.png" alt="Weight_bench">
+                    <div class="desc">Weight bench
+                        <p>Price: $349.99</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="items">
+                <div class="shop-item filterDiv others">
+                    <img src="images/Basketball_hoop.png" alt="Basketball_hoop">
+                    <div class="desc">Basketball hoop
+                        <p>Price: $199.99</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="clearfix"></div>
+            <script src="script.js"></script>
+        </div>
+
+    </body>
+</html>
