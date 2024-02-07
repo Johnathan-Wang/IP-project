@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>User Reviews</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="reviewsbody">
+        <!-- navbar -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="navbar">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i></a>
+            <a href="search.html"><i class="fa fa-fw fa-search"></i></a>
+            <a href="profile.html"><i class="fa fa-fw fa-user"></i></a>
+            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i></a>
+        </div>
+
+        <header>
+            <h1>User Reviews</h1>
+        </header>
+
+        <div style="font-size: 50px; padding: 20px;" id="reviews-container">
+            <div class="review">
+                <p><strong>Raymon</strong> - Rating: 5 stars</p>
+                <p>Amazing product and fast shipping!</p>
+            </div>
+
+            <div class="review">
+                <p><strong>Samus</strong> - Rating: 5 stars</p>
+                <p>Very good quility and helpful custumer support</p>
+            </div>
+            
+        </div>
+        
+        <!-- contact form-->
+        <form class="review-form" id="add-review-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="rating">Rating:</label>
+            <select style="font-size: 50px;" id="rating" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="review">Review:</label>
+            <textarea id="review" rows="4" required></textarea>
+
+            <button style="font-size: 50px; " type="button" onclick="addReview()">Submit Review</button>
+
+            <br>
+
+            <button style="font-size: 50px; " onclick="window.location.href = 'reviewrewards.html';">Continue</button>
+        </form>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
