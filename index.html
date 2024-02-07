@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    
 </head>
     <body>
         <div class="navbar">
             <a href="index.html"><i class="fa fa-fw fa-home"></i></a>
             <a href="search.html"><i class="fa fa-fw fa-search"></i></a>
             <a href="profile.html"><i class="fa fa-fw fa-user"></i></a>
-            <a href="cart.html"><i class="fa fa-fw fa-shopping-cart"></i></a>
+            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i></a>
         </div>
     
-        <div class="contact-icon">
-            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i></a>
+        <div class="cart-icon">
+            <a href="#" id="cart-link"><i class="fa fa-fw fa-shopping-cart"></i><span>0</span></a>
         </div>
 
         <div class="slider-container">
@@ -26,44 +27,40 @@
             <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
         <script src="script.js"></script>
-        <div class="sketchfab-embed-wrapper">
-            <iframe title="Tennis Racket" frameborder="0" allowfullscreen mozallowfullscreen="true"
+
+        <div class="listProduct">
+            <div class="item">
+                <iframe title="Tennis Racket" frameborder="0" allowfullscreen mozallowfullscreen="true"
                 webkitallowfullscreen="true"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
                 xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
                 web-share
                 src="https://sketchfab.com/models/373e62eeab7445bda2de1b07ce919a0b/embed"></iframe>
-            <p class="product-description">Tennis Racket</p>
-            <p class="product-price">$45.00</p>
+                <h2>Name Product</h2>
+                <div class="price">$45.00</div>
+                <button class="addCart">
+                    Add To Cart
+                </button>
+            </div>
         </div>
-        <div class="sketchfab-embed-wrapper">
-            <iframe title="Dumbbell" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
-                allow="autoplay; fullscreen; xr-spatial-tracking"
-                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
-                src="https://sketchfab.com/models/09bb8452bd3b4660b8af289d8e5cdc2d/embed"></iframe>
-            <p class="product-description">Dumbbell</p>
-            <p class="product-price">$46.00</p>
+        
+        <div class="cartTab">
+            <h1>Shopping Cart</h1>
+            <div class="listCart">
+            </div>
+
+            <div ><h2 style="font-size: 70px; margin-top: 125px; padding: 20px;">Total Amount: </h2></div>
+            <div>
+                <p style="  margin-left: 500px; margin-bottom: 70px;" class="totalAmount">$0</p>
+            </div>
+            
+            <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">CHECK Out</button>
+            </div>
         </div>
-        <div class="sketchfab-embed-wrapper">
-            <iframe title="Basketball Hoop" frameborder="0" allowfullscreen mozallowfullscreen="true"
-                webkitallowfullscreen="true"
-                allow="autoplay; fullscreen; xr-spatial-tracking"
-                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
-                web-share
-                src="https://sketchfab.com/models/1b44b2392d8c4433a9a913e500db3486/embed"></iframe>
-            <p class="product-description">Basketball Hoop</p>
-            <p class="product-price">$200.00</p>
-        </div>
-        <div class="sketchfab-embed-wrapper">
-            <iframe title="Weightbench" frameborder="0" allowfullscreen mozallowfullscreen="true"
-                webkitallowfullscreen="true"
-                allow="autoplay; fullscreen; xr-spatial-tracking"
-                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
-                web-share
-                src="https://sketchfab.com/models/6502a69880194858b4d6d09a4ff1df8e/embed"></iframe>
-            <p class="product-description">Weightbench</p>
-            <p class="product-price">$350.00</p>
-        </div>
+
+        <script src="cart.js"></script>
     </body>
     
-    </html>
+</html>
