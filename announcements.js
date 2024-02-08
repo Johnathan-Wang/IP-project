@@ -1,4 +1,5 @@
 // index page announcements
+//
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slider-img');
 
