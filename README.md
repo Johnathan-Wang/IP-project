@@ -116,29 +116,29 @@ I received inspiration for this project from [Decathalon](https://www.decathlon.
 
 ### Contrabutions
 Html:
-Login.html - Johnathan
-Sign-up.html - John
-Index.html - John
-Search.html - Johnathan
-Profile.html - Johnathan
-Contact.html - Johnathan
-Checkout.html - John
-rewards.html - Johnathan
-Reviews.html - Johnathan
-ReviewRewards.html - John
-Tierrewards.html - John, Johnathan
+- Login.html - Johnathan
+- Sign-up.html - John
+- Index.html - John
+- Search.html - Johnathan
+- Profile.html - Johnathan
+- Contact.html - Johnathan
+- Checkout.html - John
+- rewards.html - Johnathan
+- Reviews.html - Johnathan
+- ReviewRewards.html - John
+- Tierrewards.html - John, Johnathan
 
 Javascript:
-Login.js - Johnathan
-Signup.js - John
-Announcements.js - John
-Cart.js - John
-Search.js - Johnathan
-Profile.js - John, Johnathan
-Checkout.js - John
-rewards.js - John, Johnathan
-review.js - Johnathan
-tierrewards.js - John, Johnathan
+- Login.js - Johnathan
+- Signup.js - John
+- Announcements.js - John
+- Cart.js - John
+- Search.js - Johnathan
+- Profile.js - John, Johnathan
+- Checkout.js - John
+- rewards.js - John, Johnathan
+- review.js - Johnathan
+- tierrewards.js - John, Johnathan
 
 CSS:
 Styles.css - John, Johnathan
