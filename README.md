@@ -139,6 +139,7 @@ Javascript:
 - rewards.js - John, Johnathan
 - review.js - Johnathan
 - tierrewards.js - John, Johnathan
+- Reviewrewards.js - John, Johnathan
 
 CSS:
 Styles.css - John, Johnathan
