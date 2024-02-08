@@ -75,9 +75,9 @@
         function updateProfilePoints(addPoints) {
 
             //get current points from db
-            const apiUrl = 'https://login-dec3.restdb.io/rest/user-login?q={"username": "'
+            const apiUrl = 'https://userlogin-6619.restdb.io/rest/user-details?q={"username": "'
                                         +JSON.parse(localStorage.getItem("UserData")).username+'"}';
-            const apiKey = '65b79ba7f38b576c3fcb4028';
+            const apiKey = '65c43b7d86354fd527464bcf';
             const usernameElement = document.getElementById('username');
             const emailElement = document.getElementById('email');
             const contactElement = document.getElementById('contact');
@@ -112,7 +112,7 @@
                 newPoints=points+addPoints;
 
                 //update db
-                const updateAPIUrl = 'https://login-dec3.restdb.io/rest/user-login/'+data[0]._id;
+                const updateAPIUrl = 'https://userlogin-6619.restdb.io/rest/user-details/'+data[0]._id;
                 fetch(`${updateAPIUrl}`, {
                     method: 'PUT',
                     headers: {

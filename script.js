@@ -3,9 +3,8 @@ function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
   
-    const apiEndpoint = 'https://login-dec3.restdb.io/rest/user-login?q={"username":"'+username+'","password":"'+password+'"}';
-    //const apiEndpoint = 'https://login-dec3.restdb.io/rest/user-login';
-    const apiKey = "65b79ba7f38b576c3fcb4028";
+    const apiEndpoint = 'https://userlogin-6619.restdb.io/rest/user-details?q={"username":"'+username+'","password":"'+password+'"}';
+    const apiKey = "65c43b7d86354fd527464bcf";
   
     const headers = {
         "Content-Type": "application/json",
@@ -51,8 +50,8 @@ function login() {
     const email = document.getElementById("email").value;
   
   
-    const apiEndpoint = 'https://login-dec3.restdb.io/rest/user-login';
-    const apiKey = "65b79ba7f38b576c3fcb4028";
+    const apiEndpoint = 'https://userlogin-6619.restdb.io/rest/user-details';
+    const apiKey = "65c43b7d86354fd527464bcf";
   
   
     const headers = {
@@ -205,8 +204,8 @@ function login() {
   // show profile idk man
   document.addEventListener('DOMContentLoaded', function () {
     // API URL
-    const apiUrl = 'https://login-dec3.restdb.io/rest/user-login?q={"username": "'+sessionStorage.key["id"]+'"}';
-    const apiKey = '65b79ba7f38b576c3fcb4028';
+    const apiUrl = 'https://userlogin-6619.restdb.io/rest/user-details?q={"username": "'+sessionStorage.key["id"]+'"}';
+    const apiKey = '65c43b7d86354fd527464bcf';
     const usernameElement = document.getElementById('username');
     const fullnameElement = document.getElementById('fullname');
     const emailElement = document.getElementById('email');
@@ -245,7 +244,7 @@ function login() {
         const newContact = document.getElementById('new-contact').value;
   
         // update user information
-        const updateAPIUrl = 'https://login-dec3.restdb.io/rest/user-login/'+JSON.parse(localStorage.getItem("UserData"))._id;
+        const updateAPIUrl = 'https://userlogin-6619.restdb.io/rest/user-details/'+JSON.parse(localStorage.getItem("UserData"))._id;
         fetch(`${udpateApiUrl}`, {
             method: 'PUT',
             headers: {

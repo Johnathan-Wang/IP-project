@@ -71,7 +71,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             // API URL
-            const apiUrl = 'https://login-dec3.restdb.io/rest/user-login?q={"username": "'
+            const apiUrl = 'https://userlogin-6619.restdb.io/rest/user-details?q={"username": "'
                                 +JSON.parse(localStorage.getItem("UserData")).username+'"}';
 
             // Fetch user profile
@@ -132,7 +132,7 @@
           const newContact = document.getElementById('new-contact').value;
 
           // update user information
-          const updateAPIUrl = 'https://login-dec3.restdb.io/rest/user-login/'+JSON.parse(localStorage.getItem("UserData"))._id;
+          const updateAPIUrl = 'https://userlogin-6619.restdb.io/rest/user-details/'+JSON.parse(localStorage.getItem("UserData"))._id;
           fetch(`${updateAPIUrl}`, {
               method: 'PUT',
               headers: {
