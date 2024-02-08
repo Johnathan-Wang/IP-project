@@ -196,7 +196,7 @@ const getTotalAmount = () => {
 // Function to make the application
 const initApp = () => {
     // Fetch product data from 'products.json'
-    fetch('products.json')
+    fetch('../JSON/products.json')
         .then(response => response.json())
         .then(data => {
             // Store product data
