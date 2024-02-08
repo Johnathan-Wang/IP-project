@@ -1,3 +1,4 @@
+// Select elements from the DOM and assign them to variables
 let iconCart = document.querySelector('.cart-icon');
 let closeCart = document.querySelector('.close');
 let body = document.querySelector('body');
@@ -6,28 +7,34 @@ let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.cart-icon span');
 let UserData;
 
+// Make arrays to store product and cart data
 let listProducts = [];
 let carts = [];
 
+// Event listener for clicking on the cart icon to toggle cart display
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
+// Event listener for clicking on the close button to toggle cart display
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
+// Event listener for clicking on the checkout button
 document.querySelector('.checkOut').addEventListener('click', function (event) {
-    // Prevent default behavior if the cart is empty
+    //  alert the user if cart is empty
     if (carts.length === 0) {
         event.preventDefault();
         alert('Your cart is empty. Please add items to proceed to checkout.');
     } else {
+        // Go checkout page if cart not empty
         const cartData = JSON.stringify(carts);
         window.location.href = `checkout.html?cart=${encodeURIComponent(cartData)}`;
     }
 });
 
+// Put product data into HTML
 const addDataToHTML = () => {
     listProductHTML.innerHTML = '';
     if(listProducts.length > 0){
@@ -50,10 +57,11 @@ const addDataToHTML = () => {
                 </button>
             `;
             listProductHTML.appendChild(newProduct);
-
         });
     };
 };
+
+// Event listener for clicking on the add to cart button
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if(positionClick.classList.contains('addCart')){
@@ -62,6 +70,7 @@ listProductHTML.addEventListener('click', (event) => {
     };
 });
 
+// Function to add a product to the cart
 const addToCart = (product_id) => {
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
     if(carts.length <= 0){
@@ -82,15 +91,19 @@ const addToCart = (product_id) => {
     addCartToMemory();
 }
 
+// Function to clear the cart
 var clearCart = () => {
     localStorage.setItem('cart', "");
     addCartToHTML();
     addCartToMemory();
 }
 
+// Function to store cart data in local storage
 const addCartToMemory = () => {
     localStorage.setItem('cart', JSON.stringify(carts));
 }
+
+// Put cart data into HTML
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
     let totalQuantity = 0;
@@ -127,7 +140,7 @@ const addCartToHTML = () => {
     }
     iconCartSpan.innerText = totalQuantity;
 
-    // Display total amount somewhere in your HTML, e.g., assuming you have an element with class "totalAmount"
+    // Display total amount 
     document.querySelector('.totalAmount').innerText = `$${totalAmount}`;
 
     // Get checkout button
@@ -141,6 +154,7 @@ const addCartToHTML = () => {
     }
 };
 
+// Function to change quantity of a product in the cart
 const changeQuantity = (product_id, type) => {
     let positionItemInCart = carts.findIndex((value) => value.product_id == product_id);
     if (positionItemInCart >= 0) {
@@ -162,6 +176,7 @@ const changeQuantity = (product_id, type) => {
     addCartToHTML();
 };
 
+// Function to calculate total amount of items in the cart
 const getTotalAmount = () => {
     let totalAmount = 0;
     carts.forEach(cart => {
@@ -178,19 +193,24 @@ const getTotalAmount = () => {
     return totalAmount;
 };
 
-
+// Function to make the application
 const initApp = () => {
+    // Fetch product data from 'products.json'
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
+            // Store product data
             listProducts = data;
+            // Send product data into HTML
             addDataToHTML();
 
+            // Check if cart data exists in local storage and send it into HTML
             if (localStorage.getItem('cart')) {
                 carts = JSON.parse(localStorage.getItem('cart'));
                 addCartToHTML();
             }
 
+            // Event listener for clicking on the cart items to change quantity
             listCartHTML.addEventListener('click', (event) => {
                 let positionClick = event.target;
                 if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus')) {
@@ -203,9 +223,8 @@ const initApp = () => {
                 }
             })
 
-            //retrieve userdata
+            // Retrieve user data
             UserData = JSON.parse(localStorage.getItem('UserData'));
-            //alert(UserData.username);
         })
 }
 

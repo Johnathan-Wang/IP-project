@@ -90,7 +90,7 @@ function updateProfilePoints(addPoints) {
                 //empty cart
                 localStorage.setItem('cart', "");
 
-                //goto rewards page
+                //go to rewards page
                 window.location.href = 'rewards.html?points='+addPoints; 
             }
         })
