@@ -590,7 +590,7 @@ textarea {
   }
 
   .logincontainer {
-    height: 110%; /* Adjust login container width for laptops */
+    height: 50%; /* Adjust login container width for laptops */
   }
 
   .listProduct .item h2 {
