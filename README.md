@@ -3,6 +3,7 @@
 Sportify is a mobile application and website that sells sports equipment. It is main features are designed to encourage users to spend and buy more items from the shop.
 
 GitHub: https://github.com/Johnathan-Wang/Sportify
+Deploy: https://johnathan-wang.github.io/Sportify/
  
 ## Design Process
  
